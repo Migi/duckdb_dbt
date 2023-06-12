@@ -5,7 +5,7 @@
 Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
 
 This repository is hosting the exercises provided to students in the context of 
-the dbt course for Eduvision.
+the dbt course for Data Minded Academy.
 
 This specific exercise is focused on dbt.
 

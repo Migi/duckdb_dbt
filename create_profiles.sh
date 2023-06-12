@@ -1,7 +1,7 @@
 #!/bin/bash  
   
 # Read the username
-echo -n "Enter your username (this starts with eduvision_): "
+echo -n "Enter your username (this starts with academy_): "
 read user
 
 # Read the password, do not display it and display stars instead 
@@ -31,7 +31,7 @@ echo "testproject:
   outputs:
     dev:
       account: yw41113.eu-west-1
-      database: eduvision_dbt
+      database: academy_dbt
       password: $password
       role: student
       schema: $schema
@@ -44,7 +44,7 @@ audience_measurement:
   outputs:
     dev:
       account: yw41113.eu-west-1
-      database: eduvision_dbt
+      database: academy_dbt
       password: $password
       role: student
       schema: $schema
@@ -57,7 +57,7 @@ covid:
   outputs:
     dev:
       account: yw41113.eu-west-1
-      database: eduvision_dbt
+      database: academy_dbt
       password: $password
       role: student
       schema: $schema
