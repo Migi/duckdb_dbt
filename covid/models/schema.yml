@@ -1,0 +1,21 @@
+version: 2
+
+models:
+- name: covid_stats_per_municipality
+  description: "Covid statistics per municipality"
+  columns:
+  - name: cases_per_capita
+    tests:
+    - not_null
+  - name: vacc_per_capita
+    tests:
+    - not_null
+
+sources:
+- name: public
+  database: academy_dbt
+  schema: public
+  tables:
+  - name: population
+  - name: vacc_muni_cum
+  - name: cases_muni
