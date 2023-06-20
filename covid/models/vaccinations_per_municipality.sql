@@ -9,7 +9,7 @@ vaccinations as (
   select
     nis5,
     sum(cumul) as fully_vaccinated,
-    '2021-08-10' as by_date,
+    '{{ var("date") }}' as by_date,
     last_day_of_the_week
   from muni_vacc_with_dates
   where (dose='B' or dose='C' or dose='E')

@@ -14,8 +14,8 @@ new_cases_next_eight_weeks as (
     PROVINCE,
     REGION,
     sum(cases) as new_cases,
-    dateadd(week, 0, '2021-08-10') as from_date,
-    dateadd(week, 8, '2021-08-10') as to_date
+    dateadd(week, 0, '{{ var("date") }}') as from_date,
+    dateadd(week, 8, '{{ var("date") }}') as to_date
   from cases_with_year_week
   where date_of_case > from_date and date_of_case < to_date
   group by nis5, TX_DESCR_NL, TX_DESCR_FR, TX_ADM_DSTR_DESCR_NL, TX_ADM_DSTR_DESCR_FR, PROVINCE, REGION
