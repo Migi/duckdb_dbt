@@ -46,14 +46,3 @@ models:
         tests:
           - unique
           - not_null
-
-  - name: least_popular_program
-    description: This calculates the least popular program
-    columns:
-      - name: program
-        tests:
-          - unique
-          - not_null
-          - relationships:
-              to: ref('agg_per_program')
-              field: program

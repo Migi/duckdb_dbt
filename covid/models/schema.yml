@@ -19,3 +19,4 @@ sources:
   - name: population
   - name: vacc_muni_cum
   - name: cases_muni
+  - name: cases_muni_cum

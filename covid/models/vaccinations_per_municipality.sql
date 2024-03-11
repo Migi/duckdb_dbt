@@ -1,14 +1,17 @@
 with muni_vacc_with_dates as (
   select
     *,
-    {{ calculate_last_day_of_year_week('year_week') }}
+    (
+      date_trunc('week', strptime(CONCAT('20', substring(year_week, 1, 2) ), '%Y'))
+      + interval (cast(substring(year_week, 4, 2) as integer)) week
+    ) AS last_day_of_the_week
   from {{ source('public', 'vacc_muni_cum') }}
 ),
 vaccinations as (
   select
     nis5,
     sum(cumul) as fully_vaccinated,
-    date '{{ var("date") }}' as by_date,
+    date '2021-08-10' as by_date,
     last_day_of_the_week
   from muni_vacc_with_dates
   where (dose='B' or dose='C' or dose='E')
