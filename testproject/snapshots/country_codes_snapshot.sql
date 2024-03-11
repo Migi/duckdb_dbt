@@ -2,7 +2,7 @@
 
 {{
     config(
-      target_database='academy_dbt',
+      target_database='workspace',
       target_schema=target.schema,
       unique_key='country_code',
 

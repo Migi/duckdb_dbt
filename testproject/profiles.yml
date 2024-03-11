@@ -1,0 +1,8 @@
+testproject:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /tmp/workspace.duckdb
+      attach:
+      - path: /tmp/tpch.duckdb

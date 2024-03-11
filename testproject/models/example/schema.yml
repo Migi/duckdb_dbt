@@ -28,8 +28,8 @@ models:
 
 sources:
 - name: tpch
-  database: snowflake_sample_data
-  schema: tpch_sf1
+  database: tpch
+  schema: main
   tables:
   - name: customer
   - name: nation
