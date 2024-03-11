@@ -1,1 +1,0 @@
-sudo docker run -it --rm -p 8081:8081 --name wiremock wiremock/wiremock:2.35.0 --port 8081 --proxy-all="https://yw41113.eu-west-1.snowflakecomputing.com"
