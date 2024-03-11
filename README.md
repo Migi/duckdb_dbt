@@ -2,30 +2,14 @@
 ## Exercises Repository
 
 [![Open in
-Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/from-referrer/)
+Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Migi/duckdb_dbt.git)
 
 This repository is hosting the exercises provided to students in the context of 
 the dbt course for Data Minded Academy.
 
 This specific exercise is focused on dbt.
 
-New line added to readme.
-
 To start click on "Open in Gitpod" button
-
-Once it is started, run the script ```./create_profiles.sh``` which will generate connection
-with Snowflake Data Warehouse. DBT is already installed there, so everything
-is ready for you first dbt projects.
-
-### audience_measurement dbt project
-Enter the folder "audience_measurement" explore the files in folders:
-- models
-- tests
-
-
-Try running the following commands:
-- dbt run (See the views created at DWH)
-- dbt test
 
 ### Resources:
 - Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
