@@ -3,4 +3,4 @@ audience_measurement:
   outputs:
     dev:
       type: duckdb
-      path: /tmp/workspace.duckdb
+      path: /tmp/audience_measurement.duckdb

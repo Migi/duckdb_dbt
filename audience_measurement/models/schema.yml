@@ -1,16 +1,16 @@
 version: 2
 
 sources:
-    - name: training
-      meta:
-        external_location: "/workspace/data/{name}.parquet"
-      description: 'Timestamps and Schedule tables used as source for our project'
-      tables:
-       - name: timestamps
-         description: 'Raw event data coming from the measuring boxes'
+  - name: training
+    meta:
+      external_location: "/workspace/data/{name}.parquet"
+    description: 'Timestamps and Schedule tables used as source for our project'
+    tables:
+      - name: timestamps
+        description: 'Raw event data coming from the measuring boxes'
 
-       - name: schedule
-         description: 'TV program'
+      - name: schedule
+        description: 'TV program'
 
 
 models:

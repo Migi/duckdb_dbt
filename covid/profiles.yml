@@ -3,4 +3,4 @@ covid:
   outputs:
     dev:
       type: duckdb
-      path: /tmp/workspace.duckdb
+      path: /tmp/covid.duckdb
