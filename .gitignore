@@ -10,3 +10,4 @@ logs/
 *.zip
 /audience_measurement/logs/
 /venv/
+.user.yml
