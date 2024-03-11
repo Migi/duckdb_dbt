@@ -9,16 +9,19 @@ ENV TRIGGER_REBUILD 1
 
 USER root
 
+# Install dbt
 RUN apt-get update && \
     apt-get install -y wget git tree ssh nano sudo nmap man tmux curl joe && \
     apt-get clean && \
     rm -rf /var/cache/apt/* && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \
-    pip install dbt-snowflake
+    pip install "duckdb==0.10.0" "dbt-core==1.7.7" "dbt-snowflake==1.7.1" "dbt-duckdb==1.3.3"
 
-# Copy exercices content into the image
-# COPY --chown=gitpod content/ /home/gitpod/dbt_audiance_measurment
+# Install duckdb CLI
+RUN wget https://github.com/duckdb/duckdb/releases/download/v0.10.0/duckdb_cli-linux-amd64.zip && \
+    unzip duckdb_cli-linux-amd64.zip -d /usr/local/bin/ && \
+    rm duckdb_cli-linux-amd64.zip
 
 USER gitpod
 
