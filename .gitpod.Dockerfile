@@ -16,7 +16,7 @@ RUN apt-get update && \
     rm -rf /var/cache/apt/* && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/* && \
-    pip install "duckdb==0.10.0" "dbt-core==1.7.7" "dbt-snowflake==1.7.1" "dbt-duckdb==1.3.3"
+    pip install "dbt-core==1.7.9" "dbt-snowflake==1.7.2" "dbt-duckdb==1.7.3"
 
 # Install duckdb CLI
 RUN wget https://github.com/duckdb/duckdb/releases/download/v0.10.0/duckdb_cli-linux-amd64.zip && \
