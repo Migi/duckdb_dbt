@@ -16,14 +16,14 @@ WITH enriched_sessions as (
     WHERE
         session.finish >= '{{ var("date") }}'
       AND session.finish
-        < dateadd(day, {{ var("num_days") }}, '{{ var("date") }}')
+        < date '{{ var("date") }}' + interval {{ var("num_days") }} day
     )
 
 SELECT users,
        common_channel,
        greatest(session_beginning, schedule_beginning) beginning,
        least(session_end, schedule_end)                finish,
-       DATEDIFF(minute, beginning, finish)           time_watched_minutes,
+       DATE_DIFF('minute', beginning, finish)           time_watched_minutes,
        program,
        genre
 FROM enriched_sessions

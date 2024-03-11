@@ -5,7 +5,7 @@ WITH timestamp_events AS (
                 time as timestamp
          FROM {{ source('training', 'timestamps') }}
          WHERE timestamp >= '{{ var("date") }}'
-           AND timestamp < dateadd(day, {{ var("num_days") }}, '{{ var("date") }}')
+           AND timestamp < date '{{ var("date") }}' + interval {{ var("num_days") }} day
      ),
     sessions AS(
 	SELECT
@@ -24,6 +24,6 @@ SELECT
     users,
     channel,
     beginning,
-    COALESCE(finish, DATEADD(hour,3, beginning)) as finish
+    COALESCE(finish, beginning + interval 3 hour) as finish
 FROM
     sessions
