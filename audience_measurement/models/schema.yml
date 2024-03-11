@@ -5,8 +5,6 @@ sources:
       meta:
         external_location: "/workspace/data/{name}.parquet"
       description: 'Timestamps and Schedule tables used as source for our project'
-      database: "{{ target.database }}"
-      schema: PUBLIC
       tables:
        - name: timestamps
          description: 'Raw event data coming from the measuring boxes'

@@ -13,8 +13,8 @@ models:
 
 sources:
 - name: public
-  database: academy_dbt
-  schema: public
+  meta:
+    external_location: "/workspace/data/{name}.parquet"
   tables:
   - name: population
   - name: vacc_muni_cum

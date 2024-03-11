@@ -1,0 +1,6 @@
+covid:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: /tmp/workspace.duckdb
